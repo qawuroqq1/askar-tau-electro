@@ -369,3 +369,11 @@
   .step p { font-size: 15px; }
   .ticker__item { font-size: 16px; gap: 18px; padding-right: 18px; }
 }
+.hero__text { animation: fadeUp 1s var(--ease) both .45s; }
+.hero__actions { animation: fadeUp 1s var(--ease) both .65s; }
+.hero .eyebrow { animation: fadeUp .8s var(--ease) both .05s; }
+@media (max-width: 680px) {
+  .reveal { transform: translateY(14px); transition-duration: .6s; }
+  .reveal-d1, .reveal-d2, .reveal-d3 { transition-delay: .05s; }
+  .hero__media::after { background: linear-gradient(180deg, rgba(5,26,51,.55) 0%, rgba(5,26,51,.45) 40%, rgba(5,18,34,.92) 92%); }
+}
