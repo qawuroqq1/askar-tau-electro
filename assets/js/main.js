@@ -126,6 +126,7 @@
           var b = document.createElement("span");
           b.className = "badge " + (d.demo ? "badge--demo" : "badge--render");
           b.setAttribute("data-i18n", d.demo ? "badge.demo" : "badge.render");
+          b.textContent = t(d.demo ? "badge.demo" : "badge.render");
           holder.appendChild(b);
         }
         img.dataset.ready = "1";
@@ -199,6 +200,7 @@
       b.classList.toggle("is-active", on); b.setAttribute("aria-pressed", on ? "true" : "false");
     });
     applyImages(); applyContacts(); buildCredits();
+    document.querySelectorAll(".badge[data-i18n]").forEach(function (el) { el.textContent = t(el.getAttribute("data-i18n")); });
   }
   function bindLang() {
     document.addEventListener("click", function (e) {
