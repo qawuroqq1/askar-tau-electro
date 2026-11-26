@@ -107,7 +107,7 @@
   }
 
   var pageHero = document.querySelector(".page-hero");
-  if (hero) { addBolt(hero); if (!reduce) makeSparks(hero, 1); }
+  if (hero && !reduce) makeSparks(hero, 0.7);
   if (pageHero) {
     // крупное контурное слово на фоне — название раздела
     var page = document.body.getAttribute("data-page");
@@ -117,8 +117,6 @@
     pageHero.appendChild(word);
     var langBtnObs = function () { try { var l = localStorage.getItem("atl-lang") || "ru"; word.textContent = window.I18N[l]["nav." + page]; } catch (e) {} };
     langBtnObs(); document.addEventListener("click", function (e) { if (e.target.closest(".lang__btn")) setTimeout(langBtnObs, 0); });
-    addBolt(pageHero);
-    if (!reduce) makeSparks(pageHero, 0.55);
     var phMedia = pageHero.querySelector(".media");
     window.addEventListener("scroll", function () {
       var y = window.scrollY; if (reduce || y > window.innerHeight) return;
