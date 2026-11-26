@@ -19,7 +19,7 @@ window.SITE_CONFIG = {
   // Язык по умолчанию: "ru", "kk" или "en"
   defaultLang: "ru",
 
-  // ---- КОНТАКТЫ (пока не предоставлены) ----
+  // ---- КОНТАКТЫ ----
   contacts: {
     phone: "+7 707 222 35 60",
     phone2: null,
@@ -32,9 +32,9 @@ window.SITE_CONFIG = {
       en: "1a/1 Koitas St, Almaty District, Astana (ground floor)"
     },
     workHours: {
-      ru: "Пн–Пт 09:00–18:00, Сб–Вс выходной",
-      kk: "Дс–Жм 09:00–18:00, Сб–Жс демалыс",
-      en: "Mon–Fri 09:00–18:00, Sat–Sun closed"
+      ru: "с 09:00 до 18:00",
+      kk: "09:00-ден 18:00-ге дейін",
+      en: "9:00 AM – 6:00 PM"
     },
     // Карта: координаты офиса и ссылка на карточку в 2ГИС
     mapPoint: { lat: 51.181808, lon: 71.504036 },

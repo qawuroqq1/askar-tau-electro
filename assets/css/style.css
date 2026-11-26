@@ -525,3 +525,5 @@ h1, h2, .h2 { overflow-wrap: break-word; }
 .nav__link { white-space: nowrap; }
 @media (max-width: 1480px) { .header__cta { display: none; } }
 @media (max-width: 1320px) and (min-width: 1081px) { .header__inner { gap: 18px; } }
+.products--2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 680px) { .products--2 { grid-template-columns: 1fr; } }
