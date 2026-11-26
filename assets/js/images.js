@@ -40,6 +40,19 @@
   function own(src, alt, pos, render, small) {
     return { src: src, small: small, alt: alt, pos: pos || "50% 50%", render: !!render, demo: false };
   }
+
+  // собственные фото компании (цех и изделия): большой файл + копия 800 px, без значка
+  function shop(path, alt, pos) {
+    var b = "assets/images/" + path;
+    return own(b + ".webp", alt, pos, false, b + "-800.webp");
+  }
+  // чертёж: превью для карточки + полный лист для просмотра
+  function drawing(name, alt) {
+    var b = "assets/images/drawings/" + name;
+    var o = own(b + ".webp", alt, "50% 50%", false);
+    o.full = b + "-full.webp"; o.drawing = true;
+    return o;
+  }
   // визуализация изделия компании: большой файл + уменьшенная копия 800 px
   function viz(name, alt, pos) {
     var b = "assets/images/products/" + name;
@@ -48,10 +61,10 @@
 
   window.SITE_IMAGES = {
     /* ---------- ГЛАВНАЯ ---------- */
-    hero: demo("1747085040719-55282cc206b9", {
-      ru: "Производственный цех с мостовым краном и металлическими конструкциями",
-      kk: "Көпір кранымен және металл конструкцияларымен өндірістік цех",
-      en: "Production hall with an overhead crane and steel structures" }, "50% 45%"),
+    hero: shop("workshop/laser-1", {
+      ru: "Станок лазерной резки металла в цехе ASKAR TAU ELECTRO",
+      kk: "ASKAR TAU ELECTRO цехындағы металды лазермен кесу станогы",
+      en: "Laser metal cutting machine in the ASKAR TAU ELECTRO workshop" }, "60% 55%"),
     darkRoof: demo("1757413962101-5b536be1b764", {
       ru: "Стальные фермы покрытия промышленного здания в перспективе",
       kk: "Өнеркәсіптік ғимарат жабынының болат фермалары",
@@ -207,6 +220,86 @@
       ru: "Стальные фермы светопрозрачной кровли",
       kk: "Мөлдір шатырдың болат фермалары",
       en: "Steel trusses of a glazed roof" }),
+
+    /* ---------- ЦЕХ ASKAR TAU ELECTRO (собственные фото) ---------- */
+    shopLaser1: shop("workshop/laser-1", {
+      ru: "Станок лазерной резки металла в цехе ASKAR TAU ELECTRO", kk: "ASKAR TAU ELECTRO цехындағы металды лазермен кесу станогы", en: "Laser metal cutting machine in the ASKAR TAU ELECTRO workshop" }, "50% 55%"),
+    shopLaser2: shop("workshop/laser-2", {
+      ru: "Лазерная резка листового металла", kk: "Табақ металды лазермен кесу", en: "Laser cutting of sheet metal" }, "50% 55%"),
+    shopLaser3: shop("workshop/laser-3", {
+      ru: "Станок лазерной резки PROMAX", kk: "PROMAX лазерлік кесу станогы", en: "PROMAX laser cutting machine" }, "50% 55%"),
+    shopLaser4: shop("workshop/laser-4", {
+      ru: "Рабочий стол станка лазерной резки с листом металла", kk: "Металл табағы бар лазерлік кесу станогының үстелі", en: "Laser cutter table with a steel sheet" }, "50% 55%"),
+    shopLaser5: shop("workshop/laser-5", {
+      ru: "Станок лазерной резки и пульт оператора", kk: "Лазерлік кесу станогы және оператор пульті", en: "Laser cutter and operator console" }, "50% 55%"),
+    shopPress: shop("workshop/press-brake", {
+      ru: "Листогибочный пресс PROMAX 63/2500", kk: "PROMAX 63/2500 табақ иілу прессі", en: "PROMAX 63/2500 press brake" }, "50% 50%"),
+    shopPowder: shop("workshop/powder-line", {
+      ru: "Линия порошковой покраски и камера полимеризации", kk: "Ұнтақты бояу желісі және полимерлеу камерасы", en: "Powder coating line and curing oven" }, "50% 50%"),
+    shopPressFront: shop("workshop/press-front", {
+      ru: "Листогибочный пресс, вид спереди", kk: "Табақ иілу прессі, алдыңғы көрініс", en: "Press brake, front view" }, "50% 50%"),
+    shopPressSide: shop("workshop/press-side", {
+      ru: "Листогибочный пресс в цехе", kk: "Цехтағы табақ иілу прессі", en: "Press brake in the workshop" }, "50% 50%"),
+    shopPressPanel: shop("workshop/press-panel", {
+      ru: "Пульт управления листогибочного пресса", kk: "Табақ иілу прессінің басқару пульті", en: "Press brake control panel" }, "50% 40%"),
+    shopPaintHangers: shop("workshop/paint-hangers", {
+      ru: "Детали корпусов на подвесах линии покраски", kk: "Бояу желісінің ілгектеріндегі корпус бөлшектері", en: "Enclosure parts on the paint line hangers" }, "50% 50%"),
+    shopPaintBoxes: shop("workshop/paint-boxes", {
+      ru: "Корпуса шкафов перед порошковой покраской", kk: "Ұнтақты бояу алдындағы шкаф корпустары", en: "Cabinet bodies before powder coating" }, "50% 50%"),
+    shopOven: shop("workshop/oven", {
+      ru: "Камера полимеризации порошковой краски", kk: "Ұнтақты бояуды полимерлеу камерасы", en: "Powder coating curing oven" }, "50% 50%"),
+    shopOvenPanel: shop("workshop/oven-panel", {
+      ru: "Пульт управления камерой полимеризации", kk: "Полимерлеу камерасының басқару пульті", en: "Curing oven control panel" }, "50% 50%"),
+    shopStock1: shop("workshop/stock-rack", {
+      ru: "Стеллажи с металлом и заготовками", kk: "Металл мен дайындамалар сөрелері", en: "Racks with metal and blanks" }, "50% 50%"),
+    shopStock2: shop("workshop/stock-sheets", {
+      ru: "Склад листового металла", kk: "Табақ металл қоймасы", en: "Sheet metal storage" }, "50% 50%"),
+    shopStock3: shop("workshop/stock-shelf", {
+      ru: "Листовой металл на стеллаже", kk: "Сөредегі табақ металл", en: "Sheet metal on a rack" }, "50% 50%"),
+    shopTables: shop("workshop/shop-tables", {
+      ru: "Участок сборки в цехе", kk: "Цехтағы құрастыру учаскесі", en: "Assembly area in the workshop" }, "50% 50%"),
+    shopHall: shop("workshop/shop-hall", {
+      ru: "Производственный цех ASKAR TAU ELECTRO", kk: "ASKAR TAU ELECTRO өндірістік цехы", en: "ASKAR TAU ELECTRO production hall" }, "50% 50%"),
+    shopAisle: shop("workshop/shop-aisle", {
+      ru: "Цех: проход между участками", kk: "Цех: учаскелер арасындағы өткел", en: "Workshop aisle between work areas" }, "50% 50%"),
+    shopCnc: shop("workshop/cnc-screen", {
+      ru: "Программа раскроя на экране станка с ЧПУ", kk: "ЦБ станогының экранындағы пішу бағдарламасы", en: "Nesting program on the CNC screen" }, "50% 50%"),
+    shopFinished: shop("workshop/finished-rack", {
+      ru: "Готовые корпуса на складе", kk: "Қоймадағы дайын корпустар", en: "Finished enclosures in storage" }, "50% 50%"),
+    shopLaserTable: shop("workshop/laser-table", {
+      ru: "Раскрой листа на станке лазерной резки", kk: "Лазерлік кесу станогында табақты пішу", en: "Sheet nesting on the laser cutter" }, "50% 50%"),
+
+    /* ---------- ИЗДЕЛИЯ (собственные фото) ---------- */
+    pVentGrille: shop("products/vent-grille", {
+      ru: "Вентиляционная решётка с овальной перфорацией", kk: "Сопақ тесіктері бар желдету торы", en: "Ventilation grille with slotted perforation" }),
+    pHatch: shop("products/hatch-door", {
+      ru: "Люк-дверца с замком и порошковым покрытием", kk: "Құлпы бар ұнтақты бояулы есік-люк", en: "Access hatch door with lock, powder coated" }),
+    pEnclosureInner: shop("products/enclosure-inner-door", {
+      ru: "Шкаф ШМП с внутренней дверью и уплотнителем", kk: "Ішкі есігі мен тығыздағышы бар ШМП шкафы", en: "Wall-mount enclosure with inner door and seal" }),
+    pVruLegs: shop("products/vru-outdoor-legs", {
+      ru: "Уличное ВРУ на опорах с амперметрами и автоматом", kk: "Амперметрлері мен автоматы бар тіректегі көшелік ВРУ", en: "Outdoor distribution board on legs with ammeters and breaker" }),
+    pCabMeters: shop("products/cab-meter-windows", {
+      ru: "Двухдверный шкаф с окнами под приборы учёта", kk: "Есептеу аспаптарына арналған терезелері бар екі есікті шкаф", en: "Two-door cabinet with meter windows" }),
+    pCabGlass: shop("products/cab-glass-ammeters", {
+      ru: "Щит с остеклённой дверью, амперметрами и сигнальными лампами", kk: "Шыны есігі, амперметрлері мен сигнал шамдары бар қалқан", en: "Panel with glazed door, ammeters and indicator lamps" }),
+
+    /* ---------- ЧЕРТЕЖИ ---------- */
+    dwVru12: drawing("vru12-1", {
+      ru: "Чертёж: уличное ВРУ 900×500×800, 3D-сборка", kk: "Сызба: көшелік ВРУ 900×500×800, 3D жинақ", en: "Drawing: outdoor distribution board 900×500×800, 3D assembly" }),
+    dwVru12b: drawing("vru12-2", {
+      ru: "Чертёж: детали ВРУ с размерами", kk: "Сызба: өлшемдері бар ВРУ бөлшектері", en: "Drawing: distribution board parts with dimensions" }),
+    dwLeg: drawing("vru12-3", {
+      ru: "Чертёж: опора ВРУ — 3D-модель и развёртка", kk: "Сызба: ВРУ тірегі — 3D модель және жазба", en: "Drawing: board leg — 3D model and flat pattern" }),
+    dwRoof: drawing("vru12-4", {
+      ru: "Чертёж: крыша ВРУ — развёртка и гибка", kk: "Сызба: ВРУ шатыры — жазба және иілу", en: "Drawing: board roof — flat pattern and bends" }),
+    dwVruAmp: drawing("vru-amp", {
+      ru: "Чертёж: ВРУ 1700×800×500 с окнами под амперметры", kk: "Сызба: амперметр терезелері бар ВРУ 1700×800×500", en: "Drawing: distribution board 1700×800×500 with ammeter windows" }),
+    dwShmp: drawing("shmp", {
+      ru: "Чертёж: шкаф ШМП 800×450×250 IP54 с дополнительной дверью", kk: "Сызба: қосымша есігі бар ШМП 800×450×250 IP54 шкафы", en: "Drawing: enclosure 800×450×250 IP54 with inner door" }),
+    dwHatch2: drawing("hatch-2door", {
+      ru: "Чертёж: люк двустворчатый 1190×890×50", kk: "Сызба: екі жармалы люк 1190×890×50", en: "Drawing: double-leaf hatch 1190×890×50" }),
+    dwHatchFire: drawing("hatch-fire", {
+      ru: "Чертёж: люк встроенный для пожарного шкафа 1405×580", kk: "Сызба: өрт шкафына арналған кіріктірілген люк 1405×580", en: "Drawing: built-in hatch for a fire hose cabinet 1405×580" }),
 
     /* ---------- ЭЛЕКТРОШКАФЫ И ЛЕСТНИЦА (визуализации компании, высокое качество) ---------- */
     cabOpen4: viz("cab-open-4section", {

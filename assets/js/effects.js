@@ -157,7 +157,7 @@
       if (c.phone) h += '<a class="qa qa--call" href="tel:' + c.phone.replace(/[^\d+]/g, "") + '">' + icoPhone + '<span>' + L("ct.q.call") + '<small>' + c.phone + '</small></span></a>';
       if (c.whatsapp) h += '<a class="qa qa--wa" href="https://wa.me/' + c.whatsapp + '" target="_blank" rel="noopener">' + icoWa + '<span>' + L("ct.q.wa") + '<small>' + (c.phone || "+" + c.whatsapp) + '</small></span></a>';
       if (c.telegram) { var tg = String(c.telegram).replace(/\s/g, ""); var isNum = /^\+?\d+$/.test(tg);
-        h += '<a class="qa qa--tg" href="https://t.me/' + (isNum ? "+" + tg.replace(/^\+/, "") : tg.replace(/^@/, "")) + '" target="_blank" rel="noopener">' + icoTg + '<span>' + L("ct.q.tg") + '<small>' + (isNum ? (c.phone || tg) : "@" + tg.replace(/^@/, "")) + '</small></span></a>'; }
+        h += '<a class="qa qa--tg" href="https://t.me/' + (isNum ? "+" + tg.replace(/^\+/, "") : tg.replace(/^@/, "")) + '" target="_blank" rel="noopener">' + icoTg + '<span>' + L("ct.q.tg") + '<small>' + (isNum ? c.telegram : "@" + tg.replace(/^@/, "")) + '</small></span></a>'; }
       if (c.email) h += '<a class="qa qa--mail" href="mailto:' + c.email + '">' + icoMail + '<span>' + L("ct.q.mail") + '<small>' + c.email + '</small></span></a>';
       qa.innerHTML = h; qa.hidden = !h;
     };

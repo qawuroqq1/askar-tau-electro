@@ -15,75 +15,132 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="assets/css/style.css?v=8">
-  <link rel="stylesheet" href="assets/css/effects.css?v=8">
+  <link rel="stylesheet" href="assets/css/style.css?v=10">
+  <link rel="stylesheet" href="assets/css/effects.css?v=10">
 </head>
 <body data-page="production">
 <header id="site-header"></header>
 
 <main>
   <section class="page-hero">
-    <div class="media"><img data-img="aboutLine" data-eager sizes="100vw" alt=""></div>
+    <div class="media"><img data-img="shopPowder" data-eager sizes="100vw" alt=""></div>
     <div class="container">
       <nav class="crumbs" aria-label="breadcrumb"><a href="index.html" data-i18n="nav.home"></a><span data-i18n="nav.production"></span></nav>
       <span class="eyebrow" data-i18n="pr.eyebrow"></span>
       <h1 data-i18n="pr.title"></h1>
       <p data-i18n="pr.lead"></p>
-      <nav class="page-hero__chips" aria-label="sections"><a href="#step-1" data-i18n="pr.s1"></a><a href="#step-2" data-i18n="pr.s2"></a><a href="#step-3" data-i18n="pr.s3"></a><a href="#step-4" data-i18n="pr.s4"></a><a href="#step-5" data-i18n="pr.s5"></a><a href="#step-6" data-i18n="pr.s6"></a><a href="#step-7" data-i18n="pr.s7"></a></nav>
+      <nav class="page-hero__chips" aria-label="sections"><a href="#steps" data-i18n="pr.eyebrow"></a><a href="#equipment" data-i18n="pr.eq.title"></a><a href="#gallery" data-i18n="pr.gal.title"></a><a href="#drawings" data-i18n="pr.dw.eyebrow"></a></nav>
     </div>
   </section>
 
-  <section class="section section--dark">
+  <!-- ============ ЭТАПЫ ============ -->
+  <section class="section section--dark" id="steps">
     <div class="container">
       <div class="steps">
         <div class="step reveal" id="step-1">
-          <div class="step__media media"><img data-img="drawing" data-max="1600" data-sizes="(max-width:1080px) 100vw, 50vw" alt=""></div>
+          <div class="step__media media"><img data-img="shopCnc" data-max="1600" data-sizes="(max-width:1080px) 100vw, 50vw" alt=""></div>
           <div><span class="step__num">01</span><span class="step__label"><span data-i18n="pr.step"></span> 1</span><h2 data-i18n="pr.s1"></h2><p data-i18n="pr.s1.t"></p></div>
         </div>
         <div class="step reveal" id="step-2">
-          <div class="step__media media"><img data-img="drawing3" data-max="1600" data-sizes="(max-width:1080px) 100vw, 50vw" alt=""></div>
+          <div class="step__media media media--paper"><img data-img="dwShmp" data-max="1600" data-sizes="(max-width:1080px) 100vw, 50vw" alt=""></div>
           <div><span class="step__num">02</span><span class="step__label"><span data-i18n="pr.step"></span> 2</span><h2 data-i18n="pr.s2"></h2><p data-i18n="pr.s2.t"></p></div>
         </div>
         <div class="step reveal" id="step-3">
-          <div class="step__media media"><img data-img="cutting" data-max="1600" data-sizes="(max-width:1080px) 100vw, 50vw" alt=""></div>
+          <div class="step__media media"><img data-img="shopLaser1" data-max="1600" data-sizes="(max-width:1080px) 100vw, 50vw" alt=""></div>
           <div><span class="step__num">03</span><span class="step__label"><span data-i18n="pr.step"></span> 3</span><h2 data-i18n="pr.s3"></h2><p data-i18n="pr.s3.t"></p></div>
         </div>
         <div class="step reveal" id="step-4">
-          <div class="step__media media"><img data-img="welding" data-max="1600" data-sizes="(max-width:1080px) 100vw, 50vw" alt=""></div>
+          <div class="step__media media"><img data-img="shopPressFront" data-max="1600" data-sizes="(max-width:1080px) 100vw, 50vw" alt=""></div>
           <div><span class="step__num">04</span><span class="step__label"><span data-i18n="pr.step"></span> 4</span><h2 data-i18n="pr.s4"></h2><p data-i18n="pr.s4.t"></p></div>
         </div>
         <div class="step reveal" id="step-5">
-          <div class="step__media media"><img data-img="painting" data-max="1600" data-sizes="(max-width:1080px) 100vw, 50vw" alt=""></div>
+          <div class="step__media media"><img data-img="welding4" data-max="1600" data-sizes="(max-width:1080px) 100vw, 50vw" alt=""></div>
           <div><span class="step__num">05</span><span class="step__label"><span data-i18n="pr.step"></span> 5</span><h2 data-i18n="pr.s5"></h2><p data-i18n="pr.s5.t"></p></div>
         </div>
         <div class="step reveal" id="step-6">
-          <div class="step__media media"><img data-img="beams" data-max="1600" data-sizes="(max-width:1080px) 100vw, 50vw" alt=""></div>
+          <div class="step__media media"><img data-img="shopPaintHangers" data-max="1600" data-sizes="(max-width:1080px) 100vw, 50vw" alt=""></div>
           <div><span class="step__num">06</span><span class="step__label"><span data-i18n="pr.step"></span> 6</span><h2 data-i18n="pr.s6"></h2><p data-i18n="pr.s6.t"></p></div>
         </div>
         <div class="step reveal" id="step-7">
-          <div class="step__media media"><img data-img="montage2" data-max="1600" data-sizes="(max-width:1080px) 100vw, 50vw" alt=""></div>
+          <div class="step__media media"><img data-img="shopFinished" data-max="1600" data-sizes="(max-width:1080px) 100vw, 50vw" alt=""></div>
           <div><span class="step__num">07</span><span class="step__label"><span data-i18n="pr.step"></span> 7</span><h2 data-i18n="pr.s7"></h2><p data-i18n="pr.s7.t"></p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--paper">
+  <!-- ============ ОБОРУДОВАНИЕ ============ -->
+  <section class="section" id="equipment">
     <div class="container">
-      <div class="pending reveal">
-        <h3><span data-i18n="pr.cap.title"></span><span class="pending__tag" data-i18n="ph.section"></span></h3>
-        <p data-i18n="pr.cap.text"></p>
+      <div class="section-head section-head--single"><div><span class="eyebrow" data-i18n="pr.eq.eyebrow"></span><h2 class="h2 reveal" data-i18n="pr.eq.title"></h2></div></div>
+      <div class="eqgrid">
+        <article class="eq reveal" data-lightbox><div class="media"><img data-img="shopLaser3" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div>
+          <div class="eq__body"><span class="eq__num">01</span><h3 data-i18n="eq.laser"></h3><p data-i18n="eq.laser.t"></p></div></article>
+        <article class="eq reveal" data-lightbox><div class="media"><img data-img="shopPress" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div>
+          <div class="eq__body"><span class="eq__num">02</span><h3 data-i18n="eq.press"></h3><p data-i18n="eq.press.t"></p></div></article>
+        <article class="eq reveal" data-lightbox><div class="media"><img data-img="shopPaintBoxes" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div>
+          <div class="eq__body"><span class="eq__num">03</span><h3 data-i18n="eq.paint"></h3><p data-i18n="eq.paint.t"></p></div></article>
+        <article class="eq reveal" data-lightbox><div class="media"><img data-img="shopOven" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div>
+          <div class="eq__body"><span class="eq__num">04</span><h3 data-i18n="eq.oven"></h3><p data-i18n="eq.oven.t"></p></div></article>
+        <article class="eq reveal" data-lightbox><div class="media"><img data-img="shopStock3" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div>
+          <div class="eq__body"><span class="eq__num">05</span><h3 data-i18n="eq.stock"></h3><p data-i18n="eq.stock.t"></p></div></article>
       </div>
-      <div class="pending-grid" style="margin-top:24px">
-        <div class="stat-ph reveal"><div class="stat-ph__val">— —</div><div class="stat-ph__label" data-i18n="pr.cap.1"></div><span class="ph" data-i18n="ph.soon"></span></div>
-        <div class="stat-ph reveal reveal-d1"><div class="stat-ph__val">— —</div><div class="stat-ph__label" data-i18n="pr.cap.2"></div><span class="ph" data-i18n="ph.soon"></span></div>
-        <div class="stat-ph reveal reveal-d2"><div class="stat-ph__val">— —</div><div class="stat-ph__label" data-i18n="pr.cap.3"></div><span class="ph" data-i18n="ph.soon"></span></div>
+    </div>
+  </section>
+
+  <!-- ============ ФОТО ЦЕХА ============ -->
+  <section class="section section--navy grid-bg" id="gallery">
+    <div class="container">
+      <div class="section-head section-head--single"><div><span class="eyebrow" data-i18n="pr.gal.eyebrow"></span><h2 class="h2 reveal" data-i18n="pr.gal.title"></h2></div></div>
+      <div class="mgal">
+        <div class="mgal__item mgal__item--wide" data-lightbox><div class="media"><img data-img="shopLaser4" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div></div>
+        <div class="mgal__item" data-lightbox><div class="media"><img data-img="shopPressSide" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div></div>
+        <div class="mgal__item" data-lightbox><div class="media"><img data-img="shopPaintHangers" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div></div>
+        <div class="mgal__item mgal__item--wide" data-lightbox><div class="media"><img data-img="shopHall" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div></div>
+        <div class="mgal__item mgal__item--tall" data-lightbox><div class="media"><img data-img="shopOvenPanel" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div></div>
+        <div class="mgal__item mgal__item--tall" data-lightbox><div class="media"><img data-img="shopPressPanel" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div></div>
+        <div class="mgal__item mgal__item--tall" data-lightbox><div class="media"><img data-img="shopLaserTable" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div></div>
+        <div class="mgal__item mgal__item--tall" data-lightbox><div class="media"><img data-img="shopAisle" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div></div>
+        <div class="mgal__item" data-lightbox><div class="media"><img data-img="shopStock1" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div></div>
+        <div class="mgal__item" data-lightbox><div class="media"><img data-img="shopTables" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div></div>
+        <div class="mgal__item mgal__item--wide" data-lightbox><div class="media"><img data-img="shopLaser2" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div></div>
+        <div class="mgal__item" data-lightbox><div class="media"><img data-img="shopStock2" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div></div>
+        <div class="mgal__item mgal__item--tall" data-lightbox><div class="media"><img data-img="shopFinished" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div></div>
+        <div class="mgal__item mgal__item--wide" data-lightbox><div class="media"><img data-img="shopLaser5" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ЧЕРТЕЖИ ============ -->
+  <section class="section section--paper" id="drawings">
+    <div class="container">
+      <div class="section-head">
+        <div><span class="eyebrow" data-i18n="pr.dw.eyebrow"></span><h2 class="h2 reveal" data-i18n="pr.dw.title"></h2></div>
+        <p class="lead reveal reveal-d1" data-i18n="pr.dw.text"></p>
+      </div>
+      <div class="dwgrid">
+        <figure class="dwcard reveal" data-lightbox><div class="media media--paper"><img data-img="dwVru12" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div>
+          <figcaption><span class="dwcard__tags"><i data-i18n="dw.3d"></i><i data-i18n="dw.parts"></i></span><b data-i18n="dw.vru12"></b><span class="dwcard__open" data-i18n="dw.open"></span></figcaption></figure>
+        <figure class="dwcard reveal" data-lightbox><div class="media media--paper"><img data-img="dwVruAmp" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div>
+          <figcaption><span class="dwcard__tags"><i data-i18n="dw.tag.windows"></i><i data-i18n="dw.3d"></i></span><b data-i18n="dw.vruAmp"></b><span class="dwcard__open" data-i18n="dw.open"></span></figcaption></figure>
+        <figure class="dwcard reveal" data-lightbox><div class="media media--paper"><img data-img="dwShmp" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div>
+          <figcaption><span class="dwcard__tags"><i data-i18n="dw.tag.ip"></i><i data-i18n="dw.tag.door"></i></span><b data-i18n="dw.shmp"></b><span class="dwcard__open" data-i18n="dw.open"></span></figcaption></figure>
+        <figure class="dwcard reveal" data-lightbox><div class="media media--paper"><img data-img="dwHatch2" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div>
+          <figcaption><span class="dwcard__tags"><i data-i18n="dw.3d"></i></span><b data-i18n="dw.hatch2"></b><span class="dwcard__open" data-i18n="dw.open"></span></figcaption></figure>
+        <figure class="dwcard reveal" data-lightbox><div class="media media--paper"><img data-img="dwHatchFire" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div>
+          <figcaption><span class="dwcard__tags"><i data-i18n="dw.3d"></i></span><b data-i18n="dw.hatchFire"></b><span class="dwcard__open" data-i18n="dw.open"></span></figcaption></figure>
+        <figure class="dwcard reveal" data-lightbox><div class="media media--paper"><img data-img="dwVru12b" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div>
+          <figcaption><span class="dwcard__tags"><i data-i18n="dw.parts"></i></span><b data-i18n="dw.vru12b"></b><span class="dwcard__open" data-i18n="dw.open"></span></figcaption></figure>
+        <figure class="dwcard reveal" data-lightbox><div class="media media--paper"><img data-img="dwLeg" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div>
+          <figcaption><span class="dwcard__tags"><i data-i18n="dw.3d"></i><i data-i18n="dw.flat"></i></span><b data-i18n="dw.leg"></b><span class="dwcard__open" data-i18n="dw.open"></span></figcaption></figure>
+        <figure class="dwcard reveal" data-lightbox><div class="media media--paper"><img data-img="dwRoof" data-sizes="(max-width:680px) 100vw, (max-width:1080px) 50vw, 33vw" alt=""></div>
+          <figcaption><span class="dwcard__tags"><i data-i18n="dw.flat"></i></span><b data-i18n="dw.roof"></b><span class="dwcard__open" data-i18n="dw.open"></span></figcaption></figure>
       </div>
     </div>
   </section>
 
   <section class="cta">
-    <div class="media"><img data-img="darkRoof" data-sizes="100vw" alt=""></div>
+    <div class="media"><img data-img="shopLaser3" data-sizes="100vw" alt=""></div>
     <div class="container cta__inner">
       <div><h2 class="reveal" data-i18n="home.cta.title"></h2><p class="reveal reveal-d1" data-i18n="home.cta.text"></p></div>
       <div class="cta__actions reveal reveal-d2"><a href="contacts.html#form" class="btn btn--primary" data-i18n="cta.request"></a></div>
@@ -93,10 +150,10 @@
 
 <footer id="site-footer"></footer>
 
-<script src="assets/js/config.js?v=8"></script>
-<script src="assets/js/images.js?v=8"></script>
-<script src="assets/js/i18n.js?v=8"></script>
-<script src="assets/js/main.js?v=8"></script>
-<script src="assets/js/effects.js?v=8"></script>
+<script src="assets/js/config.js?v=10"></script>
+<script src="assets/js/images.js?v=10"></script>
+<script src="assets/js/i18n.js?v=10"></script>
+<script src="assets/js/main.js?v=10"></script>
+<script src="assets/js/effects.js?v=10"></script>
 </body>
 </html>

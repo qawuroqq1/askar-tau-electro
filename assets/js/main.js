@@ -166,7 +166,7 @@
         var isNum = /^\+?\d+$/.test(c.telegram.replace(/\s/g, ""));
         var tg = c.telegram.replace(/\s/g, "").replace(/^@/, "");
         return '<a href="https://t.me/' + esc(isNum ? "+" + tg.replace(/^\+/, "") : tg) + '" target="_blank" rel="noopener">' +
-          esc(isNum ? (c.phone || c.telegram) : "@" + tg) + "</a>";
+          esc(isNum ? c.telegram : "@" + tg) + "</a>";
       case "address": var a = tl(c.address); return a ? esc(a) : placeholder();
       case "hours": var h = tl(c.workHours); return h ? esc(h) : placeholder();
       case "legalName": return (CFG.legal && CFG.legal.fullName) ? esc(CFG.legal.fullName) : placeholder();
@@ -282,7 +282,8 @@
       var list = visible(); idx = (i + list.length) % list.length;
       var src = list[idx];
       var d = IMG[src.getAttribute("data-img")] || {};
-      bi.src = d.unsplash ? d.unsplash + "?auto=format&fit=max&w=2000&q=75" : src.currentSrc || src.src;
+      bi.src = d.full || (d.unsplash ? d.unsplash + "?auto=format&fit=max&w=2000&q=75" : (d.src || src.currentSrc || src.src));
+      box.classList.toggle("lightbox--paper", !!d.drawing);
       bi.alt = src.alt; cap.textContent = src.alt;
       box.hidden = false; document.body.classList.add("no-scroll");
     }
