@@ -57,29 +57,29 @@
       en: "Welder at work with sparks in a dark workshop" }),
 
     /* ---------- О КОМПАНИИ ---------- */
-    aboutFactory: demo("1496247749665-49cf5b1022e9", {
-      ru: "Интерьер крупного промышленного предприятия",
-      kk: "Ірі өнеркәсіптік кәсіпорынның ішкі көрінісі",
-      en: "Interior of a large industrial plant" }),
-    aboutLine: demo("1720036236855-9a1a2e4d3f26", {
-      ru: "Производственный участок с промышленным оборудованием",
-      kk: "Өнеркәсіптік жабдығы бар өндірістік учаске",
-      en: "Production area with industrial equipment" }),
-    aboutHall: demo("1717386255773-1e3037c81788", {
-      ru: "Современный производственный корпус",
-      kk: "Заманауи өндірістік корпус",
-      en: "Modern production building" }),
+    aboutFactory: demo("1720036237334-9263cd28c3d4", {
+      ru: "Производственный цех с оборудованием",
+      kk: "Жабдықталған өндірістік цех",
+      en: "Production workshop with equipment" }),
+    aboutLine: demo("1720036237182-5e0adada1873", {
+      ru: "Цех металлообработки",
+      kk: "Металл өңдеу цехы",
+      en: "Metalworking shop" }),
+    aboutHall: demo("1608126841830-53832c4b326f", {
+      ru: "Мастерская по изготовлению металлоконструкций",
+      kk: "Металл конструкцияларын дайындау шеберханасы",
+      en: "Steel fabrication workshop" }),
 
     /* ---------- ПРОДУКЦИЯ: демо-фото ---------- */
     frames: demo("1785257532053-34686f5c3e10", {
       ru: "Стальной каркас промышленного здания на этапе монтажа",
       kk: "Монтаж кезеңіндегі өнеркәсіптік ғимараттың болат қаңқасы",
       en: "Steel frame of an industrial building under erection" }),
-    frames2: demo("1785227988608-b47fb703256f", {
-      ru: "Металлический каркас здания на фоне неба",
-      kk: "Аспан аясындағы ғимараттың металл қаңқасы",
-      en: "Steel building frame against the sky" }),
-    trusses: demo("1509024368907-57294758cfc5", {
+    frames2: demo("1531435338678-4ef2b632e95d", {
+      ru: "Арочные стальные балки покрытия",
+      kk: "Жабынның доға тәрізді болат арқалықтары",
+      en: "Arched steel roof beams" }),
+    trusses: demo("1627922529156-41f27fb6f7ac", {
       ru: "Пространственные стальные фермы",
       kk: "Кеңістіктік болат фермалар",
       en: "Space steel trusses" }),
@@ -103,14 +103,14 @@
       ru: "Жёлтая стальная балка крупным планом",
       kk: "Сары болат арқалық жақыннан",
       en: "Yellow steel beam close-up" }),
-    industrial: demo("1724814884431-5f931c9620ae", {
-      ru: "Промышленная металлоконструкция изнутри",
-      kk: "Өнеркәсіптік металл конструкция ішінен",
-      en: "Industrial steel structure from inside" }),
-    finished: demo("1790625107279-295bba597873", {
-      ru: "Готовый промышленный объект",
-      kk: "Дайын өнеркәсіптік нысан",
-      en: "Completed industrial facility" }),
+    industrial: demo("1609627016501-b862497c7294", {
+      ru: "Решётчатая стальная конструкция крупным планом",
+      kk: "Торлы болат конструкция жақыннан",
+      en: "Lattice steel structure close-up" }),
+    finished: demo("1565610222536-ef125c59da2e", {
+      ru: "Готовое здание на стальном каркасе: пролёт с фермами покрытия",
+      kk: "Болат қаңқалы дайын ғимарат: жабын фермалары бар аралық",
+      en: "Finished steel-framed building: bay with roof trusses" }),
     finished2: demo("1759310347467-578dfd846229", {
       ru: "Складской комплекс с воротами",
       kk: "Қақпалары бар қойма кешені",
@@ -125,18 +125,18 @@
       ru: "Сварщик в защитной маске выполняет сварку металла",
       kk: "Қорғаныс маскасындағы дәнекерлеуші металды дәнекерлеуде",
       en: "Welder in a protective helmet welding metal" }),
-    welding2: demo("1504328345606-18bbc8c9d7d1", {
-      ru: "Сварочные работы на производстве",
-      kk: "Өндірістегі дәнекерлеу жұмыстары",
-      en: "Welding work in production" }),
-    welding3: demo("1531053326607-9d349096d887", {
-      ru: "Сварка металлической детали",
-      kk: "Металл бөлшекті дәнекерлеу",
-      en: "Welding a steel part" }),
-    welding4: demo("1683470157212-cd4005549fce", {
-      ru: "Сборка и сварка металлоконструкции",
-      kk: "Металл конструкцияны құрастыру және дәнекерлеу",
-      en: "Assembly and welding of a steel structure" }),
+    welding2: demo("1608126841548-dfad1d420a0f", {
+      ru: "Сварщик в маске работает в мастерской",
+      kk: "Маскадағы дәнекерлеуші шеберханада жұмыс істеуде",
+      en: "Welder in a helmet working in a workshop" }),
+    welding3: demo("1569950044239-51ead24e2c48", {
+      ru: "Сварка металлоконструкции в цехе, искры",
+      kk: "Цехта металл конструкцияны дәнекерлеу, ұшқындар",
+      en: "Welding a steel structure in the shop with sparks" }),
+    welding4: demo("1608126842524-7e10c3b18453", {
+      ru: "Сборка и сварка металлических секций",
+      kk: "Металл секцияларды құрастыру және дәнекерлеу",
+      en: "Assembling and welding steel panels" }),
     grinding: demo("1714504904786-b6732390b206", {
       ru: "Обработка металла болгаркой, сноп искр",
       kk: "Металды бұрыштық тегістегішпен өңдеу",
@@ -149,26 +149,26 @@
       ru: "Станок лазерной резки металла",
       kk: "Металды лазермен кесу станогы",
       en: "Laser metal cutting machine" }),
-    cutting: demo("1598302936625-6075fbd98dd7", {
-      ru: "Резка стальной балки, искры",
-      kk: "Болат арқалықты кесу, ұшқындар",
-      en: "Cutting a steel beam with sparks" }),
-    painting: demo("1792262149563-61afbcb52fb7", {
-      ru: "Нанесение покрытия краскопультом",
-      kk: "Бояу бүріккішпен жабын жағу",
-      en: "Applying a coating with a spray gun" }),
+    cutting: demo("1508465818649-14a170138405", {
+      ru: "Резка металла, сноп искр",
+      kk: "Металды кесу, ұшқындар",
+      en: "Metal cutting with a shower of sparks" }),
+    painting: demo("1734290173288-031bf53b7ccb", {
+      ru: "Обработка поверхности металла перед покраской",
+      kk: "Бояу алдында металл бетін өңдеу",
+      en: "Metal surface treatment before painting" }),
     painting2: demo("1795165308718-2b2faf9dd0a1", {
       ru: "Краскопульт для антикоррозийной обработки",
       kk: "Коррозияға қарсы өңдеуге арналған бүріккіш",
       en: "Spray gun for anti-corrosion coating" }),
-    montage: demo("1623489254637-a2dd8375243d", {
-      ru: "Монтажник работает на металлоконструкции",
-      kk: "Монтажшы металл конструкцияда жұмыс істеуде",
-      en: "Erector working on a steel structure" }),
-    montage2: demo("1726087167125-03c390694a03", {
-      ru: "Строительная площадка с кранами",
-      kk: "Крандары бар құрылыс алаңы",
-      en: "Construction site with cranes" }),
+    montage: demo("1600965581129-eef8a214ec9d", {
+      ru: "Монтажник на стальных балках на высоте",
+      kk: "Биіктіктегі болат арқалықтардағы монтажшы",
+      en: "Steel erector working on beams at height" }),
+    montage2: demo("1616224952327-6240f31e5bdc", {
+      ru: "Монтаж стального каркаса с подъёмника",
+      kk: "Көтергіштен болат қаңқаны монтаждау",
+      en: "Erecting a steel frame from a lift" }),
     montage3: demo("1780147345952-7ed74e568388", {
       ru: "Возведение стального каркаса здания",
       kk: "Ғимараттың болат қаңқасын тұрғызу",
@@ -185,6 +185,23 @@
       ru: "Проектирование: карандаш и линейка на чертеже",
       kk: "Жобалау: сызбадағы қарындаш пен сызғыш",
       en: "Design work: pencil and ruler on a drawing" }),
+
+    montage4: demo("1614127938540-a1139bee1841", {
+      ru: "Монтажники на металлической конструкции кровли",
+      kk: "Шатырдың металл конструкциясындағы монтажшылар",
+      en: "Erectors working on a steel roof structure" }),
+    sparks2: demo("1582649831749-e2d634f55cf3", {
+      ru: "Вспышка сварочной дуги в тёмном цехе",
+      kk: "Қараңғы цехтағы дәнекерлеу доғасының жарқылы",
+      en: "Welding arc flash in a dark workshop" }),
+    warehouse: demo("1694885169342-909981fb408a", {
+      ru: "Пролёт здания со стальными фермами покрытия",
+      kk: "Болат жабын фермалары бар ғимарат аралығы",
+      en: "Building bay with steel roof trusses" }),
+    glassRoof: demo("1668886580919-ce45651f3ccf", {
+      ru: "Стальные фермы светопрозрачной кровли",
+      kk: "Мөлдір шатырдың болат фермалары",
+      en: "Steel trusses of a glazed roof" }),
 
     /* ---------- ВИЗУАЛИЗАЦИИ ИЗДЕЛИЙ ASKAR TAU ELECTRO ---------- */
     pGateWood: own("assets/images/products/gate-wood-slats.webp", {
