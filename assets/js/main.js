@@ -340,6 +340,19 @@
     });
   }
 
+  /* ---------------- «УЗНАТЬ ЦЕНУ» → WhatsApp с названием изделия ---------------- */
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-ask]");
+    if (!b) return;
+    var c = CFG.contacts || {};
+    var name = t(b.getAttribute("data-ask")).replace(/<[^>]+>/g, "");
+    var msg = t("pc.askMsg").replace("{name}", name);
+    if (c.whatsapp) {
+      var url = "https://wa.me/" + c.whatsapp + "?text=" + encodeURIComponent(msg);
+      var w = window.open(url, "_blank"); if (!w) location.href = url;
+    } else { location.href = "contacts.html#form"; }
+  });
+
   /* ---------------- СТАРТ ---------------- */
   buildHeader();
   buildFooter();
