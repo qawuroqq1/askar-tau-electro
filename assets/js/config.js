@@ -21,14 +21,25 @@ window.SITE_CONFIG = {
 
   // ---- КОНТАКТЫ (пока не предоставлены) ----
   contacts: {
-    phone: null,        // пример: "+7 700 000 00 00"
+    phone: "+7 707 222 35 60",
     phone2: null,
-    whatsapp: null,     // только цифры, пример: "77000000000"
-    telegram: null,     // пример: "askartau"
+    whatsapp: "77072223560", // только цифры
+    telegram: "+77072223560", // имя пользователя (askartau) или номер (+77072223560)
     email: null,        // пример: "info@askartau.kz"
-    address: { ru: null, kk: null, en: null },
-    workHours: { ru: null, kk: null, en: null },
-    mapEmbedUrl: null   // ссылка для <iframe> карты (2ГИС / Яндекс / Google)
+    address: {
+      ru: "г. Астана, район Алматы, ул. Койтас, 1а/1, 1 этаж",
+      kk: "Астана қ., Алматы ауданы, Қойтас көшесі, 1а/1, 1-қабат",
+      en: "1a/1 Koitas St, Almaty District, Astana (ground floor)"
+    },
+    workHours: {
+      ru: "Пн–Пт 09:00–18:00, Сб–Вс выходной",
+      kk: "Дс–Жм 09:00–18:00, Сб–Жс демалыс",
+      en: "Mon–Fri 09:00–18:00, Sat–Sun closed"
+    },
+    // Карта: координаты офиса и ссылка на карточку в 2ГИС
+    mapPoint: { lat: 51.181808, lon: 71.504036 },
+    map2gisUrl: "https://2gis.kz/astana/firm/70000001117711115",
+    mapEmbedUrl: null   // своя ссылка для <iframe> (если нужна другая карта)
   },
 
   // ---- РЕКВИЗИТЫ ----

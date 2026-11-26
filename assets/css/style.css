@@ -507,3 +507,21 @@ h1, h2, .h2 { overflow-wrap: break-word; }
   .h2 { font-size: clamp(26px, 7.4vw, 34px); }
 }
 .media img { color: transparent; }
+
+/* ---------- Телефон в шапке, WhatsApp, карта ---------- */
+.header__phone { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: var(--navy); white-space: nowrap; }
+.header__phone svg { width: 18px; height: 18px; stroke: var(--yellow-600); fill: none; stroke-width: 2; }
+.header__phone:hover { color: var(--yellow-600); }
+@media (max-width: 1320px) { .header__phone span { display: none; } .header__phone { width: 44px; height: 44px; justify-content: center; border: 1px solid var(--line-light); border-radius: var(--radius); } }
+.wa-float { position: fixed; right: 22px; bottom: 22px; z-index: 90; width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: #fff;
+  display: grid; place-items: center; box-shadow: 0 12px 30px -8px rgba(0, 0, 0, .45); transition: transform .25s var(--ease); }
+.wa-float:hover { transform: scale(1.08); }
+.wa-float svg { width: 32px; height: 32px; }
+.menu-open .wa-float, .no-scroll .wa-float { display: none; }
+.map.has-map { position: relative; }
+.map__open { position: absolute; left: 16px; bottom: 16px; z-index: 2; }
+.map__open::after { display: none; }
+@media (max-width: 680px) { .wa-float { right: 16px; bottom: 16px; width: 54px; height: 54px; } }
+.nav__link { white-space: nowrap; }
+@media (max-width: 1480px) { .header__cta { display: none; } }
+@media (max-width: 1320px) and (min-width: 1081px) { .header__inner { gap: 18px; } }

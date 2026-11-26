@@ -53,6 +53,7 @@
           '<a href="contacts.html#form" class="btn btn--primary" data-i18n="cta.request"></a></div>' +
         "</nav>" +
         '<div class="header__actions">' +
+          '<a class="header__phone" data-header-phone hidden href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span></span></a>' +
           '<div class="lang lang--desktop">' + langs + "</div>" +
           '<a href="contacts.html#form" class="btn btn--primary btn--sm header__cta" data-i18n="cta.request"></a>' +
           '<button class="burger" type="button" aria-controls="main-nav" aria-expanded="false">' +
@@ -158,9 +159,13 @@
       case "email":
         return c.email ? '<a href="mailto:' + esc(c.email) + '">' + esc(c.email) + "</a>" : placeholder();
       case "whatsapp":
-        return c.whatsapp ? '<a href="https://wa.me/' + esc(c.whatsapp) + '" target="_blank" rel="noopener">+' + esc(c.whatsapp) + "</a>" : placeholder();
+        return c.whatsapp ? '<a href="https://wa.me/' + esc(c.whatsapp) + '" target="_blank" rel="noopener">' + esc(c.phone || "+" + c.whatsapp) + "</a>" : placeholder();
       case "telegram":
-        return c.telegram ? '<a href="https://t.me/' + esc(c.telegram) + '" target="_blank" rel="noopener">@' + esc(c.telegram) + "</a>" : placeholder();
+        if (!c.telegram) return placeholder();
+        var isNum = /^\+?\d+$/.test(c.telegram.replace(/\s/g, ""));
+        var tg = c.telegram.replace(/\s/g, "").replace(/^@/, "");
+        return '<a href="https://t.me/' + esc(isNum ? "+" + tg.replace(/^\+/, "") : tg) + '" target="_blank" rel="noopener">' +
+          esc(isNum ? (c.phone || c.telegram) : "@" + tg) + "</a>";
       case "address": var a = tl(c.address); return a ? esc(a) : placeholder();
       case "hours": var h = tl(c.workHours); return h ? esc(h) : placeholder();
       case "legalName": return (CFG.legal && CFG.legal.fullName) ? esc(CFG.legal.fullName) : placeholder();
@@ -177,9 +182,28 @@
       el.hidden = !items.length;
     });
     var map = document.querySelector("[data-map]");
-    if (map && CFG.contacts && CFG.contacts.mapEmbedUrl && !map.querySelector("iframe")) {
-      map.innerHTML = '<iframe src="' + esc(CFG.contacts.mapEmbedUrl) + '" loading="lazy" title="Map" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+    var cc = CFG.contacts || {};
+    var embed = cc.mapEmbedUrl;
+    if (!embed && cc.mapPoint) {
+      var la = cc.mapPoint.lat, lo = cc.mapPoint.lon, dx = 0.012, dy = 0.005;
+      embed = "https://www.openstreetmap.org/export/embed.html?bbox=" + (lo - dx) + "%2C" + (la - dy) + "%2C" + (lo + dx) + "%2C" + (la + dy) +
+        "&layer=mapnik&marker=" + la + "%2C" + lo;
+    }
+    if (map && embed && !map.querySelector("iframe")) {
+      map.innerHTML = '<iframe src="' + esc(embed) + '" loading="lazy" title="Map" referrerpolicy="no-referrer-when-downgrade"></iframe>' +
+        (cc.map2gisUrl ? '<a class="map__open btn btn--primary btn--sm" href="' + esc(cc.map2gisUrl) + '" target="_blank" rel="noopener" data-i18n="ct.map.open">' + esc(t("ct.map.open")) + "</a>" : "");
       map.classList.add("has-map");
+    }
+    var mo = document.querySelector(".map__open"); if (mo) mo.textContent = t("ct.map.open");
+    // Телефон в шапке и плавающая кнопка WhatsApp
+    var hp = document.querySelector("[data-header-phone]");
+    if (hp) { hp.hidden = !cc.phone; if (cc.phone) { hp.href = "tel:" + cc.phone.replace(/[^\d+]/g, ""); hp.querySelector("span").textContent = cc.phone; } }
+    if (cc.whatsapp && !document.querySelector(".wa-float")) {
+      var wa = document.createElement("a");
+      wa.className = "wa-float"; wa.href = "https://wa.me/" + cc.whatsapp; wa.target = "_blank"; wa.rel = "noopener";
+      wa.setAttribute("aria-label", "WhatsApp");
+      wa.innerHTML = '<svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.3 3.6 5.7 5 2.1.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>';
+      document.body.appendChild(wa);
     }
   }
 
