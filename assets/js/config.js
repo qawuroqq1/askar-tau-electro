@@ -25,7 +25,7 @@ window.SITE_CONFIG = {
     phone2: null,
     whatsapp: "77072223560", // только цифры
     telegram: "+77072223560", // имя пользователя (askartau) или номер (+77072223560)
-    email: null,        // пример: "info@askartau.kz"
+    email: "ara_8414@mail.ru",
     address: {
       ru: "г. Астана, район Алматы, ул. Койтас, 1а/1, 1 этаж",
       kk: "Астана қ., Алматы ауданы, Қойтас көшесі, 1а/1, 1-қабат",
@@ -41,6 +41,10 @@ window.SITE_CONFIG = {
     map2gisUrl: "https://2gis.kz/astana/firm/70000001117711115",
     mapEmbedUrl: null   // своя ссылка для <iframe> (если нужна другая карта)
   },
+
+  // Куда уходит заявка с формы: "whatsapp" (сразу открывается чат с готовым
+  // текстом заявки) или "email" (открывается почтовое приложение).
+  formTarget: "whatsapp",
 
   // ---- РЕКВИЗИТЫ ----
   legal: {

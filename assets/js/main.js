@@ -316,13 +316,21 @@
       if (!v("name") || !v("phone")) { msg.textContent = t("ct.f.err"); msg.className = "form__msg is-error"; return; }
       var c = CFG.contacts || {};
       var sel = f.elements.type; var typeTxt = sel && sel.selectedIndex > 0 ? sel.options[sel.selectedIndex].text : "";
-      var body = [t("ct.f.name") + ": " + v("name"), t("ct.f.phone") + ": " + v("phone"),
-        v("email") ? "Email: " + v("email") : "", typeTxt ? t("ct.f.type") + ": " + typeTxt : "", "", v("message")]
-        .filter(function (x, i) { return x !== "" || i === 4; }).join("\n");
-      if (c.email) {
-        location.href = "mailto:" + c.email + "?subject=" + encodeURIComponent("Заявка с сайта ASKAR TAU ELECTRO") + "&body=" + encodeURIComponent(body);
+      var lines = ["*" + t("ct.f.subject") + "*", "",
+        t("ct.f.name") + ": " + v("name"), t("ct.f.phone") + ": " + v("phone")];
+      if (v("email")) lines.push("Email: " + v("email"));
+      if (typeTxt) lines.push(t("ct.f.type") + ": " + typeTxt);
+      if (v("message")) lines.push("", v("message"));
+      var body = lines.join("\n");
+      var target = CFG.formTarget || "whatsapp";
+      if (target === "whatsapp" && c.whatsapp) {
+        var url = "https://wa.me/" + c.whatsapp + "?text=" + encodeURIComponent(body);
+        var w = window.open(url, "_blank");
+        if (!w) location.href = url;           // если браузер заблокировал новое окно
+      } else if (c.email) {
+        location.href = "mailto:" + c.email + "?subject=" + encodeURIComponent(t("ct.f.subject")) + "&body=" + encodeURIComponent(body.replace(/\*/g, ""));
       } else if (c.whatsapp) {
-        window.open("https://wa.me/" + c.whatsapp + "?text=" + encodeURIComponent(body), "_blank", "noopener");
+        location.href = "https://wa.me/" + c.whatsapp + "?text=" + encodeURIComponent(body);
       } else {
         msg.textContent = t("ct.f.pending"); msg.className = "form__msg is-pending"; return;
       }

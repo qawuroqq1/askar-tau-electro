@@ -1,0 +1,115 @@
+/* =====================================================================
+   ASKAR TAU ELECTRO — визуальные эффекты
+   Все анимации отключаются, если в системе включено «Уменьшить движение».
+   ===================================================================== */
+
+/* ---------- Полоса прогресса прокрутки ---------- */
+.scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 100%; z-index: 200; pointer-events: none;
+  background: linear-gradient(90deg, var(--yellow), #ffe27a); transform-origin: left; transform: scaleX(var(--p, 0)); box-shadow: 0 0 12px rgba(254, 190, 5, .7); }
+
+/* ---------- HERO: искры, параллакс, появление ---------- */
+.hero__sparks { position: absolute; inset: 0; z-index: 1; pointer-events: none; mix-blend-mode: screen; }
+.hero__media { will-change: transform; }
+.hero__title { animation: titleIn 1.3s var(--ease) both .15s; }
+@keyframes titleIn { from { clip-path: inset(0 0 100% 0); transform: translateY(40px); } to { clip-path: inset(0 0 -10% 0); transform: none; } }
+.hero__title em {
+  background: linear-gradient(100deg, var(--yellow) 0%, var(--yellow) 40%, #fff3c4 50%, var(--yellow) 60%, var(--yellow) 100%);
+  background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  animation: shimmer 5s ease-in-out infinite 1.6s;
+}
+@keyframes shimmer { 0% { background-position: 100% 0; } 60%, 100% { background-position: -50% 0; } }
+.hero__bolt { position: absolute; right: 7%; top: 22%; z-index: 1; width: clamp(160px, 22vw, 360px); opacity: .9; pointer-events: none;
+  filter: drop-shadow(0 0 30px rgba(254, 190, 5, .55)); animation: boltFloat 6s ease-in-out infinite; }
+.hero__bolt path { fill: none; stroke: var(--yellow); stroke-width: 2.2; stroke-linejoin: round; stroke-dasharray: 900; stroke-dashoffset: 900;
+  animation: boltDraw 2.4s var(--ease) forwards .6s, boltFlicker 7s steps(1) infinite 3.2s; }
+.hero__bolt .bolt-fill { fill: rgba(254, 190, 5, .07); stroke: none; animation: none; opacity: 0; transition: opacity 1s; }
+.hero__bolt.is-drawn .bolt-fill { opacity: 1; }
+@keyframes boltDraw { to { stroke-dashoffset: 0; } }
+@keyframes boltFlicker { 0%, 100% { opacity: 1; } 92% { opacity: 1; } 93% { opacity: .25; } 94% { opacity: 1; } 96% { opacity: .4; } 97% { opacity: 1; } }
+@keyframes boltFloat { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-14px) rotate(1.5deg); } }
+
+/* ---------- Бегущая строка ---------- */
+.ticker { position: relative; background: var(--yellow); color: var(--navy-900); overflow: hidden; padding: 22px 0; transform: skewY(-1.2deg); margin: -16px 0 -6px; z-index: 5; box-shadow: 0 20px 40px -24px rgba(5, 26, 51, .6); }
+.ticker__track { display: flex; width: max-content; animation: tick 38s linear infinite; }
+.ticker:hover .ticker__track { animation-play-state: paused; }
+.ticker__item { display: inline-flex; align-items: center; gap: 28px; padding-right: 28px; font-family: var(--font-head); font-weight: 800; font-size: clamp(18px, 2.2vw, 28px); text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
+.ticker__item::after { content: ""; width: 18px; height: 22px; background: var(--navy);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13 2 3 14h7l-1 8 10-12h-7z'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13 2 3 14h7l-1 8 10-12h-7z'/%3E%3C/svg%3E") center/contain no-repeat; }
+.ticker__item:nth-child(even) { color: transparent; -webkit-text-stroke: 1.5px var(--navy-900); }
+@keyframes tick { to { transform: translateX(-50%); } }
+
+/* ---------- Свечение за курсором в тёмных блоках ---------- */
+.glow-follow { --gx: 50%; --gy: 50%; }
+.glow-follow::after { content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1; opacity: 0; transition: opacity .5s;
+  background: radial-gradient(520px circle at var(--gx) var(--gy), rgba(254, 190, 5, .10), transparent 60%); }
+.glow-follow.is-hover::after { opacity: 1; }
+.section.glow-follow > .container, .cta.glow-follow .cta__inner { z-index: 2; }
+
+/* ---------- Карточки: 3D-наклон и блик ---------- */
+.tilt { transform-style: preserve-3d; will-change: transform; transition: transform .5s var(--ease), box-shadow .35s var(--ease); }
+.tilt.is-tilting { transition: transform .08s linear, box-shadow .35s var(--ease); }
+.tilt .spot { position: absolute; inset: 0; z-index: 5; pointer-events: none; opacity: 0; transition: opacity .3s; border-radius: inherit;
+  background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, .22), transparent 45%); mix-blend-mode: soft-light; }
+.tilt.is-tilting .spot { opacity: 1; }
+.approach__item.tilt, .contact-card.tilt { position: relative; overflow: hidden; }
+.approach__item .approach__icon { transition: transform .5s var(--ease), background .3s; }
+.approach__item:hover .approach__icon { transform: rotate(-8deg) scale(1.08); background: var(--yellow); }
+.approach__item:hover .approach__icon svg { stroke: var(--navy-900); }
+
+/* ---------- Появление фото «шторкой» ---------- */
+.wipe { clip-path: inset(0 100% 0 0); transition: clip-path 1.2s cubic-bezier(.77, 0, .18, 1); }
+.wipe::before { content: ""; position: absolute; inset: 0; z-index: 4; background: var(--yellow); transform: scaleX(0); transform-origin: left; }
+.wipe.is-wiped { clip-path: inset(0 0 0 0); }
+.wipe.is-wiped::before { animation: wipeBar 1.2s cubic-bezier(.77, 0, .18, 1) forwards; }
+@keyframes wipeBar { 0% { transform: scaleX(0); transform-origin: left; } 45% { transform: scaleX(1); transform-origin: left; } 55% { transform: scaleX(1); transform-origin: right; } 100% { transform: scaleX(0); transform-origin: right; } }
+.wipe img { transform: scale(1.15); transition: transform 1.8s var(--ease), opacity .7s; }
+.wipe.is-wiped img.is-loaded { transform: scale(1); }
+
+/* ---------- Кнопки: блик и «магнит» ---------- */
+.btn { position: relative; overflow: hidden; isolation: isolate; }
+.btn--primary::before { content: ""; position: absolute; top: 0; bottom: 0; left: -60%; width: 40%; z-index: -1;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .65), transparent); transform: skewX(-20deg); transition: left .7s var(--ease); }
+.btn--primary:hover::before { left: 130%; }
+.btn--primary { box-shadow: 0 10px 30px -12px rgba(254, 190, 5, .7); }
+.btn--primary:hover { box-shadow: 0 14px 36px -10px rgba(254, 190, 5, .85); }
+.magnetic { transition: transform .35s var(--ease), background .25s, color .25s, border-color .25s, box-shadow .25s; }
+
+/* ---------- Цифры этапов «наливаются» цветом ---------- */
+.cycle__num, .step__num { background: linear-gradient(0deg, var(--yellow) 0 var(--fill, 0%), transparent var(--fill, 0%)); -webkit-background-clip: text; background-clip: text;
+  transition: --fill 1.4s var(--ease); }
+@property --fill { syntax: "<percentage>"; inherits: false; initial-value: 0%; }
+.in .cycle__num, .cycle__item.in .cycle__num, .step.in .step__num { --fill: 100%; }
+.step.in .step__num { -webkit-text-stroke-color: rgba(254, 190, 5, .5); }
+
+/* ---------- Подсветка заголовков секций ---------- */
+.h2 { position: relative; }
+
+/* ---------- Кнопка «наверх» ---------- */
+.to-top { position: fixed; right: 26px; bottom: 96px; z-index: 89; width: 48px; height: 48px; border-radius: 50%; border: 0;
+  background: var(--navy); color: var(--yellow); display: grid; place-items: center; box-shadow: 0 10px 26px -10px rgba(0, 0, 0, .5);
+  opacity: 0; transform: translateY(16px) scale(.9); pointer-events: none; transition: opacity .3s, transform .3s var(--ease), background .2s; }
+.to-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { background: var(--yellow); color: var(--navy-900); }
+.to-top svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2.4; }
+.wa-float::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: #25d366; z-index: -1; animation: waPulse 2.6s ease-out infinite; }
+@keyframes waPulse { 0% { transform: scale(1); opacity: .6; } 100% { transform: scale(1.7); opacity: 0; } }
+.menu-open .to-top, .no-scroll .to-top { display: none; }
+
+/* ---------- Плитки портфолио и изделий ---------- */
+.rail__item .media, .tile .media { box-shadow: 0 0 0 rgba(0, 0, 0, 0); transition: box-shadow .4s var(--ease), transform .4s var(--ease); }
+.rail__item:hover .media { transform: translateY(-6px); box-shadow: 0 24px 40px -22px rgba(5, 26, 51, .55); }
+.rail__item:hover h3 { color: var(--yellow-600); }
+.rail__item h3 { transition: color .25s; }
+
+@media (max-width: 680px) {
+  .hero__bolt { width: 120px; right: -10px; top: 14%; opacity: .45; }
+  .to-top { right: 19px; bottom: 82px; width: 44px; height: 44px; }
+  .ticker { padding: 14px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wipe { clip-path: none; } .wipe::before { display: none; }
+  .hero__bolt path { stroke-dashoffset: 0; }
+  .ticker__track { animation: none; }
+  .hero__sparks { display: none; }
+}
