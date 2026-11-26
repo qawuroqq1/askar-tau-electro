@@ -7,6 +7,8 @@
 window.I18N = {
 /* ============================== RU ============================== */
 ru: {
+  "prod.vrsh.t": "Навесной щит с вводным автоматом и группами модульных автоматов на съёмных панелях. Распашная дверь с замками, заземление двери.",
+  "prod.vrsh": "ВРЩ — вводно-распределительный щит",
   "ct.f.opt8": "Люки и решётки",
   "tick.hatch": "Люки и решётки",
   "tick.electro": "Шкафы ВРУ и ШМП",
@@ -234,6 +236,8 @@ ru: {
 
 /* ============================== KK ============================== */
 kk: {
+  "prod.vrsh.t": "Кіріс автоматы және алынбалы панельдердегі модульдік автоматтар топтары бар аспалы қалқан. Құлыптары бар ашылмалы есік, есікті жерге тұйықтау.",
+  "prod.vrsh": "ВРЩ — кіріс-тарату қалқаны",
   "ct.f.opt8": "Люктер мен торлар",
   "tick.hatch": "Люктер мен торлар",
   "tick.electro": "ВРУ және ШМП шкафтары",
@@ -454,6 +458,8 @@ kk: {
 
 /* ============================== EN ============================== */
 en: {
+  "prod.vrsh.t": "Wall-mounted board with an incoming breaker and groups of modular breakers on removable panels. Hinged door with locks and door earthing.",
+  "prod.vrsh": "Main distribution board (VRShch)",
   "ct.f.opt8": "Hatches and grilles",
   "tick.hatch": "Hatches & grilles",
   "tick.electro": "Distribution boards",
