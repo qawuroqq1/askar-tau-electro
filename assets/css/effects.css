@@ -208,3 +208,33 @@
   .group-title span { font-size: 30px; }
 }
 @media (prefers-reduced-motion: reduce) { .form::before { animation: none; } }
+
+/* ---------- Галерея электрошкафов ---------- */
+.egal { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.egal__item { cursor: zoom-in; border-radius: var(--radius-lg); overflow: hidden; position: relative; }
+.egal__item .media { aspect-ratio: 4 / 3; height: 100%; border-radius: var(--radius-lg); }
+.egal__item--big { grid-column: span 2; grid-row: span 2; }
+.egal__item .media::after { content: ""; position: absolute; inset: 0; z-index: 2; border: 1px solid rgba(254, 190, 5, 0); border-radius: inherit; transition: border-color .3s, box-shadow .3s; }
+.egal__item:hover .media::after { border-color: rgba(254, 190, 5, .9); box-shadow: inset 0 0 40px rgba(254, 190, 5, .15); }
+.egal__item:hover .media img.is-loaded { transform: scale(1.05); }
+.group-title--dark { color: var(--white); border-bottom-color: var(--line-dark); margin: 0; }
+/* блок на главной */
+.electro-feature__grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 72px; align-items: center; }
+.electro-feature__collage { display: grid; grid-template-columns: 1.3fr 1fr; grid-template-rows: 1fr 1fr; gap: 14px; height: 520px; }
+.electro-feature__collage .media { border-radius: var(--radius-lg); box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .6); }
+.electro-feature__collage .media:first-child { grid-row: span 2; }
+.electro-feature__collage .media img { transition: transform 1.2s var(--ease), opacity .7s; }
+.electro-feature__collage:hover .media img.is-loaded { transform: scale(1.04); }
+@media (max-width: 1080px) {
+  .egal { grid-template-columns: repeat(2, 1fr); }
+  .electro-feature__grid { grid-template-columns: 1fr; gap: 40px; }
+  .electro-feature__collage { height: 440px; }
+}
+@media (max-width: 680px) {
+  .egal { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .egal__item--big { grid-column: span 2; grid-row: auto; }
+  .electro-feature__collage { height: 340px; gap: 8px; }
+}
+.egal__item--wide { grid-column: span 2; }
+.egal__item--wide .media { aspect-ratio: 8 / 3.05; }
+@media (max-width: 1080px) { .egal__item--wide { grid-column: span 1; } .egal__item--wide .media { aspect-ratio: 4 / 3; } }

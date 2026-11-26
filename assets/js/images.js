@@ -37,8 +37,13 @@
     o.id = id;
     return o;
   }
-  function own(src, alt, pos, render) {
-    return { src: src, alt: alt, pos: pos || "50% 50%", render: !!render, demo: false };
+  function own(src, alt, pos, render, small) {
+    return { src: src, small: small, alt: alt, pos: pos || "50% 50%", render: !!render, demo: false };
+  }
+  // визуализация изделия компании: большой файл + уменьшенная копия 800 px
+  function viz(name, alt, pos) {
+    var b = "assets/images/products/" + name;
+    return own(b + ".webp", alt, pos, true, b + "-800.webp");
   }
 
   window.SITE_IMAGES = {
@@ -203,6 +208,52 @@
       kk: "Мөлдір шатырдың болат фермалары",
       en: "Steel trusses of a glazed roof" }),
 
+    /* ---------- ЭЛЕКТРОШКАФЫ И ЛЕСТНИЦА (визуализации компании, высокое качество) ---------- */
+    cabOpen4: viz("cab-open-4section", {
+      ru: "Визуализация: шкаф для электрооборудования из четырёх секций, открытая дверь с автоматами",
+      kk: "Визуализация: төрт секциялы электр шкафы, автоматтары бар ашық есік",
+      en: "Render: four-section electrical cabinet with an open door showing breakers" }),
+    cabOpen3: viz("cab-open-3section", {
+      ru: "Визуализация: многосекционный электрошкаф с открытой секцией",
+      kk: "Визуализация: ашық секциясы бар көпсекциялы электр шкафы",
+      en: "Render: multi-section electrical cabinet with one section open" }),
+    cabControl: viz("cab-control-panel", {
+      ru: "Визуализация: шкаф управления с сенсорной панелью оператора и кнопками",
+      kk: "Визуализация: оператор панелі мен батырмалары бар басқару шкафы",
+      en: "Render: control cabinet with an operator touch panel and buttons" }),
+    cab3door: viz("cab-3door", {
+      ru: "Визуализация: трёхдверный напольный электрошкаф",
+      kk: "Визуализация: үш есікті еденге қойылатын электр шкафы",
+      en: "Render: three-door floor-standing electrical cabinet" }),
+    cab2door: viz("cab-2door", {
+      ru: "Визуализация: двухдверный электрошкаф с вентиляционными решётками",
+      kk: "Визуализация: желдету торлары бар екі есікті электр шкафы",
+      en: "Render: two-door electrical cabinet with ventilation grilles" }),
+    cabLong: viz("cab-long-4door", {
+      ru: "Визуализация: низкий четырёхдверный электрошкаф",
+      kk: "Визуализация: аласа төрт есікті электр шкафы",
+      en: "Render: low four-door electrical cabinet" }),
+    cabEnclosure: viz("cab-ventilated-enclosure", {
+      ru: "Визуализация: вентилируемый корпус для электрооборудования",
+      kk: "Визуализация: электр жабдығына арналған желдетілетін корпус",
+      en: "Render: ventilated enclosure for electrical equipment" }),
+    cabSingle: viz("cab-single", {
+      ru: "Визуализация: однодверный напольный электрошкаф",
+      kk: "Визуализация: бір есікті еденге қойылатын электр шкафы",
+      en: "Render: single-door floor-standing electrical cabinet" }),
+    cabWall: viz("cab-wall", {
+      ru: "Визуализация: настенный электрошкаф на колонне",
+      kk: "Визуализация: бағанаға ілінген электр шкафы",
+      en: "Render: wall-mounted electrical cabinet on a column" }),
+    cabOutdoor: viz("cab-outdoor", {
+      ru: "Визуализация: компактный уличный электрошкаф",
+      kk: "Визуализация: шағын көшелік электр шкафы",
+      en: "Render: compact outdoor electrical cabinet" }),
+    pStairsPlatform: viz("stairs-platform", {
+      ru: "Визуализация: металлическая лестница с площадкой и ограждениями",
+      kk: "Визуализация: алаңы мен қоршаулары бар металл баспалдақ",
+      en: "Render: steel staircase with platform and guardrails" }),
+
     /* ---------- ВИЗУАЛИЗАЦИИ ИЗДЕЛИЙ ASKAR TAU ELECTRO ---------- */
     pGateWood: own("assets/images/products/gate-wood-slats.webp", {
       ru: "Визуализация: откатные ворота с деревянными ламелями и логотипом",
@@ -212,22 +263,10 @@
       ru: "Визуализация: ворота с лазерной резкой и фирменной табличкой",
       kk: "Визуализация: лазермен кесілген өрнегі бар қақпа",
       en: "Render: gate with laser-cut pattern and nameplate" }, "50% 50%", true),
-    pStairs: own("assets/images/products/stairs-industrial.webp", {
-      ru: "Визуализация: промышленная металлическая лестница с площадкой",
-      kk: "Визуализация: алаңы бар өнеркәсіптік металл баспалдақ",
-      en: "Render: industrial steel staircase with platform" }, "50% 50%", true),
     pStairsYellow: own("assets/images/products/stairs-yellow-treads.webp", {
       ru: "Визуализация: лестница с жёлтыми противоскользящими ступенями",
       kk: "Визуализация: сырғанауға қарсы сары басқыштары бар баспалдақ",
       en: "Render: staircase with yellow anti-slip treads" }, "50% 50%", true),
-    pCabinetOpen: own("assets/images/products/electrical-cabinet-open.webp", {
-      ru: "Визуализация: шкаф для электрооборудования, открытая дверь",
-      kk: "Визуализация: электр жабдығына арналған шкаф",
-      en: "Render: electrical equipment cabinet, door open" }, "50% 50%", true),
-    pCabinetClosed: own("assets/images/products/electrical-cabinet-closed.webp", {
-      ru: "Визуализация: металлический корпус электрошкафа с вентиляцией",
-      kk: "Визуализация: желдеткіші бар электр шкафының металл корпусы",
-      en: "Render: ventilated steel electrical enclosure" }, "50% 50%", true),
     pCanopyArch: own("assets/images/products/canopy-arched.webp", {
       ru: "Визуализация: арочный навес с поликарбонатом и скамьёй",
       kk: "Визуализация: поликарбонатты доға тәрізді қалқа",

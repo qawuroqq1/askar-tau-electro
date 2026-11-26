@@ -105,6 +105,9 @@ ru: {
   "prod.cabinets": "Корпуса для электрооборудования", "prod.cabinets.t": "Металлические шкафы и корпуса для размещения электрооборудования.",
   "prod.screens": "Декоративные экраны", "prod.screens.t": "Защитные и декоративные экраны для кондиционеров и инженерного оборудования.",
   "prod.urban": "Малые архитектурные формы", "prod.urban.t": "Кашпо, урны, скамьи и элементы благоустройства, в том числе с национальным орнаментом.",
+  "prod.g3": "Шкафы и корпуса для электрооборудования",
+  "prod.g3.t": "Напольные, настенные и уличные шкафы, многосекционные корпуса, шкафы управления с панелью оператора и вентилируемые корпуса для размещения электрооборудования.",
+  "home.electro.eyebrow": "Электрооборудование", "cta.viewAll": "Смотреть все модели", "pf.electro": "Электрошкафы",
   "prod.cta.title": "Не нашли нужное изделие?",
   "prod.cta.text": "Изготовим конструкцию по вашим чертежам или разработаем документацию под задачу.",
 
@@ -271,6 +274,9 @@ kk: {
   "prod.cabinets": "Электр жабдығына арналған корпустар", "prod.cabinets.t": "Электр жабдығын орналастыруға арналған металл шкафтар мен корпустар.",
   "prod.screens": "Сәндік экрандар", "prod.screens.t": "Кондиционерлер мен инженерлік жабдыққа арналған қорғаныс және сәндік экрандар.",
   "prod.urban": "Шағын сәулет нысандары", "prod.urban.t": "Гүлсауыттар, урналар, орындықтар және абаттандыру элементтері, соның ішінде ұлттық өрнекпен.",
+  "prod.g3": "Электр жабдығына арналған шкафтар мен корпустар",
+  "prod.g3.t": "Еденге қойылатын, қабырғаға ілінетін және көшелік шкафтар, көпсекциялы корпустар, оператор панелі бар басқару шкафтары және электр жабдығын орналастыруға арналған желдетілетін корпустар.",
+  "home.electro.eyebrow": "Электр жабдығы", "cta.viewAll": "Барлық модельдерді көру", "pf.electro": "Электр шкафтары",
   "prod.cta.title": "Қажетті бұйымды таппадыңыз ба?",
   "prod.cta.text": "Конструкцияны сіздің сызбаларыңыз бойынша дайындаймыз немесе тапсырмаға сай құжаттама әзірлейміз.",
 
@@ -433,6 +439,9 @@ en: {
   "prod.cabinets": "Electrical enclosures", "prod.cabinets.t": "Steel cabinets and enclosures for electrical equipment.",
   "prod.screens": "Decorative screens", "prod.screens.t": "Protective and decorative screens for air conditioners and building services.",
   "prod.urban": "Street furniture", "prod.urban.t": "Planters, bins, benches and landscaping elements, including national ornament designs.",
+  "prod.g3": "Electrical cabinets and enclosures",
+  "prod.g3.t": "Floor-standing, wall-mounted and outdoor cabinets, multi-section enclosures, control cabinets with an operator panel and ventilated enclosures for electrical equipment.",
+  "home.electro.eyebrow": "Electrical equipment", "cta.viewAll": "View all models", "pf.electro": "Electrical cabinets",
   "prod.cta.title": "Didn't find what you need?",
   "prod.cta.text": "We will fabricate to your drawings or develop documentation for your task.",
 

@@ -116,6 +116,7 @@
           if (!img.sizes) img.sizes = img.getAttribute("data-sizes") || "100vw";
         } else {
           img.src = d.local || d.src;
+          if (d.small) { img.srcset = d.small + " 800w, " + d.src + " 1600w"; if (!img.sizes) img.sizes = img.getAttribute("data-sizes") || "(max-width: 900px) 100vw, 50vw"; }
         }
         if (!img.hasAttribute("loading")) img.loading = img.hasAttribute("data-eager") ? "eager" : "lazy";
         img.decoding = "async";
