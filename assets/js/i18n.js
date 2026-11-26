@@ -205,7 +205,7 @@ ru: {
   "pf.eyebrow": "Портфолио",
   "pf.title": "Изделия, цех и чертежи",
   "pf.lead": "Изделия, производство и чертежи ASKAR TAU ELECTRO.",
-  "pf.notice": "Здесь собраны фото нашего цеха, изделия и чертежи. Часть изделий показана в виде визуализаций — они отмечены значком «Визуализация».",
+  "pf.notice": "Здесь собраны наши изделия, фото цеха и чертежи. Нажмите на фото, чтобы открыть его крупно.",
   "pf.all": "Все",
   "pf.items": "Изделия", "pf.process": "Производство",
 
@@ -428,7 +428,7 @@ kk: {
   "pf.eyebrow": "Портфолио",
   "pf.title": "Бұйымдар, цех және сызбалар",
   "pf.lead": "ASKAR TAU ELECTRO бұйымдары, өндірісі және сызбалары.",
-  "pf.notice": "Мұнда біздің цехтың суреттері, бұйымдар және сызбалар жиналған. Бұйымдардың бір бөлігі визуализация түрінде көрсетілген — олар «Визуализация» белгісімен белгіленген.",
+  "pf.notice": "Мұнда біздің бұйымдар, цех суреттері және сызбалар жиналған. Үлкейту үшін суретті басыңыз.",
   "pf.all": "Барлығы",
   "pf.items": "Бұйымдар", "pf.process": "Өндіріс",
 
@@ -650,7 +650,7 @@ en: {
   "pf.eyebrow": "Portfolio",
   "pf.title": "Products, workshop and drawings",
   "pf.lead": "ASKAR TAU ELECTRO products, production and drawings.",
-  "pf.notice": "Photos of our workshop, products and drawings. Some products are shown as renders — they are marked with a “Render” badge.",
+  "pf.notice": "Our products, workshop photos and drawings. Click a photo to view it larger.",
   "pf.all": "All",
   "pf.items": "Products", "pf.process": "Production",
 

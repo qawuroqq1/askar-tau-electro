@@ -124,7 +124,7 @@
         img.addEventListener("load", function () { img.classList.add("is-loaded"); });
         if (img.complete && img.naturalWidth) img.classList.add("is-loaded");
         var holder = img.closest(".media");
-        if (holder && !img.hasAttribute("data-nobadge") && (d.demo || d.render)) {
+        if (holder && !img.hasAttribute("data-nobadge") && d.demo) {
           var b = document.createElement("span");
           b.className = "badge " + (d.demo ? "badge--demo" : "badge--render");
           b.setAttribute("data-i18n", d.demo ? "badge.demo" : "badge.render");

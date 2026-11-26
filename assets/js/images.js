@@ -303,90 +303,90 @@
 
     /* ---------- ЭЛЕКТРОШКАФЫ И ЛЕСТНИЦА (визуализации компании, высокое качество) ---------- */
     vrshOpen: viz("vrsh-open", {
-      ru: "Визуализация: ВРЩ — вводно-распределительный щит, открытая дверь, вводной автомат и группы автоматов",
-      kk: "Визуализация: ВРЩ — кіріс-тарату қалқаны, ашық есік, кіріс автоматы және автоматтар топтары",
-      en: "Render: main distribution board, door open, incoming breaker and breaker groups" }),
+      ru: "ВРЩ — вводно-распределительный щит, открытая дверь, вводной автомат и группы автоматов",
+      kk: "ВРЩ — кіріс-тарату қалқаны, ашық есік, кіріс автоматы және автоматтар топтары",
+      en: "Main distribution board, door open, incoming breaker and breaker groups" }),
     vrshClosed: viz("vrsh-closed", {
-      ru: "Визуализация: ВРЩ — вводно-распределительный щит с закрытой дверью и двумя замками",
-      kk: "Визуализация: ВРЩ — жабық есігі мен екі құлпы бар кіріс-тарату қалқаны",
-      en: "Render: main distribution board with closed door and two locks" }),
+      ru: "ВРЩ — вводно-распределительный щит с закрытой дверью и двумя замками",
+      kk: "ВРЩ — жабық есігі мен екі құлпы бар кіріс-тарату қалқаны",
+      en: "Main distribution board with closed door and two locks" }),
     cabOpen4: viz("cab-open-4section", {
-      ru: "Визуализация: шкаф для электрооборудования из четырёх секций, открытая дверь с автоматами",
-      kk: "Визуализация: төрт секциялы электр шкафы, автоматтары бар ашық есік",
-      en: "Render: four-section electrical cabinet with an open door showing breakers" }),
+      ru: "Шкаф для электрооборудования из четырёх секций, открытая дверь с автоматами",
+      kk: "Төрт секциялы электр шкафы, автоматтары бар ашық есік",
+      en: "Four-section electrical cabinet with an open door showing breakers" }),
     cabOpen3: viz("cab-open-3section", {
-      ru: "Визуализация: многосекционный электрошкаф с открытой секцией",
-      kk: "Визуализация: ашық секциясы бар көпсекциялы электр шкафы",
-      en: "Render: multi-section electrical cabinet with one section open" }),
+      ru: "Многосекционный электрошкаф с открытой секцией",
+      kk: "Ашық секциясы бар көпсекциялы электр шкафы",
+      en: "Multi-section electrical cabinet with one section open" }),
     cabControl: viz("cab-control-panel", {
-      ru: "Визуализация: шкаф управления с сенсорной панелью оператора и кнопками",
-      kk: "Визуализация: оператор панелі мен батырмалары бар басқару шкафы",
-      en: "Render: control cabinet with an operator touch panel and buttons" }),
+      ru: "Шкаф управления с сенсорной панелью оператора и кнопками",
+      kk: "Оператор панелі мен батырмалары бар басқару шкафы",
+      en: "Control cabinet with an operator touch panel and buttons" }),
     cab3door: viz("cab-3door", {
-      ru: "Визуализация: трёхдверный напольный электрошкаф",
-      kk: "Визуализация: үш есікті еденге қойылатын электр шкафы",
-      en: "Render: three-door floor-standing electrical cabinet" }),
+      ru: "Трёхдверный напольный электрошкаф",
+      kk: "Үш есікті еденге қойылатын электр шкафы",
+      en: "Three-door floor-standing electrical cabinet" }),
     cab2door: viz("cab-2door", {
-      ru: "Визуализация: двухдверный электрошкаф с вентиляционными решётками",
-      kk: "Визуализация: желдету торлары бар екі есікті электр шкафы",
-      en: "Render: two-door electrical cabinet with ventilation grilles" }),
+      ru: "Двухдверный электрошкаф с вентиляционными решётками",
+      kk: "Желдету торлары бар екі есікті электр шкафы",
+      en: "Two-door electrical cabinet with ventilation grilles" }),
     cabLong: viz("cab-long-4door", {
-      ru: "Визуализация: низкий четырёхдверный электрошкаф",
-      kk: "Визуализация: аласа төрт есікті электр шкафы",
-      en: "Render: low four-door electrical cabinet" }),
+      ru: "Низкий четырёхдверный электрошкаф",
+      kk: "Аласа төрт есікті электр шкафы",
+      en: "Low four-door electrical cabinet" }),
     cabEnclosure: viz("cab-ventilated-enclosure", {
-      ru: "Визуализация: вентилируемый корпус для электрооборудования",
-      kk: "Визуализация: электр жабдығына арналған желдетілетін корпус",
-      en: "Render: ventilated enclosure for electrical equipment" }),
+      ru: "Вентилируемый корпус для электрооборудования",
+      kk: "Электр жабдығына арналған желдетілетін корпус",
+      en: "Ventilated enclosure for electrical equipment" }),
     cabSingle: viz("cab-single", {
-      ru: "Визуализация: однодверный напольный электрошкаф",
-      kk: "Визуализация: бір есікті еденге қойылатын электр шкафы",
-      en: "Render: single-door floor-standing electrical cabinet" }),
+      ru: "Однодверный напольный электрошкаф",
+      kk: "Бір есікті еденге қойылатын электр шкафы",
+      en: "Single-door floor-standing electrical cabinet" }),
     cabWall: viz("cab-wall", {
-      ru: "Визуализация: настенный электрошкаф на колонне",
-      kk: "Визуализация: бағанаға ілінген электр шкафы",
-      en: "Render: wall-mounted electrical cabinet on a column" }),
+      ru: "Настенный электрошкаф на колонне",
+      kk: "Бағанаға ілінген электр шкафы",
+      en: "Wall-mounted electrical cabinet on a column" }),
     cabOutdoor: viz("cab-outdoor", {
-      ru: "Визуализация: компактный уличный электрошкаф",
-      kk: "Визуализация: шағын көшелік электр шкафы",
-      en: "Render: compact outdoor electrical cabinet" }),
+      ru: "Компактный уличный электрошкаф",
+      kk: "Шағын көшелік электр шкафы",
+      en: "Compact outdoor electrical cabinet" }),
     pStairsPlatform: viz("stairs-platform", {
-      ru: "Визуализация: металлическая лестница с площадкой и ограждениями",
-      kk: "Визуализация: алаңы мен қоршаулары бар металл баспалдақ",
-      en: "Render: steel staircase with platform and guardrails" }),
+      ru: "Металлическая лестница с площадкой и ограждениями",
+      kk: "Алаңы мен қоршаулары бар металл баспалдақ",
+      en: "Steel staircase with platform and guardrails" }),
 
     /* ---------- ВИЗУАЛИЗАЦИИ ИЗДЕЛИЙ ASKAR TAU ELECTRO ---------- */
     pGateWood: own("assets/images/products/gate-wood-slats.webp", {
-      ru: "Визуализация: откатные ворота с деревянными ламелями и логотипом",
-      kk: "Визуализация: ағаш ламельдері бар сырғымалы қақпа",
-      en: "Render: sliding gate with timber slats and logo" }, "50% 50%", true),
+      ru: "Откатные ворота с деревянными ламелями и логотипом",
+      kk: "Ағаш ламельдері бар сырғымалы қақпа",
+      en: "Sliding gate with timber slats and logo" }, "50% 50%", true),
     pGateLaser: own("assets/images/products/gate-laser-pattern.webp", {
-      ru: "Визуализация: ворота с лазерной резкой и фирменной табличкой",
-      kk: "Визуализация: лазермен кесілген өрнегі бар қақпа",
-      en: "Render: gate with laser-cut pattern and nameplate" }, "50% 50%", true),
+      ru: "Ворота с лазерной резкой и фирменной табличкой",
+      kk: "Лазермен кесілген өрнегі бар қақпа",
+      en: "Gate with laser-cut pattern and nameplate" }, "50% 50%", true),
     pStairsYellow: own("assets/images/products/stairs-yellow-treads.webp", {
-      ru: "Визуализация: лестница с жёлтыми противоскользящими ступенями",
-      kk: "Визуализация: сырғанауға қарсы сары басқыштары бар баспалдақ",
-      en: "Render: staircase with yellow anti-slip treads" }, "50% 50%", true),
+      ru: "Лестница с жёлтыми противоскользящими ступенями",
+      kk: "Сырғанауға қарсы сары басқыштары бар баспалдақ",
+      en: "Staircase with yellow anti-slip treads" }, "50% 50%", true),
     pCanopyArch: own("assets/images/products/canopy-arched.webp", {
-      ru: "Визуализация: арочный навес с поликарбонатом и скамьёй",
-      kk: "Визуализация: поликарбонатты доға тәрізді қалқа",
-      en: "Render: arched polycarbonate canopy with bench" }, "50% 50%", true),
+      ru: "Арочный навес с поликарбонатом и скамьёй",
+      kk: "Поликарбонатты доға тәрізді қалқа",
+      en: "Arched polycarbonate canopy with bench" }, "50% 50%", true),
     pCanopyFlat: own("assets/images/products/canopy-flat.webp", {
-      ru: "Визуализация: металлический навес с профнастилом",
-      kk: "Визуализация: профнастилді металл қалқа",
-      en: "Render: steel canopy with profiled sheeting" }, "50% 50%", true),
+      ru: "Металлический навес с профнастилом",
+      kk: "Профнастилді металл қалқа",
+      en: "Steel canopy with profiled sheeting" }, "50% 50%", true),
     pAcOrnament: own("assets/images/products/ac-cover-ornament.webp", {
-      ru: "Визуализация: декоративный экран для кондиционера с орнаментом",
-      kk: "Визуализация: ою-өрнекті кондиционер экраны",
-      en: "Render: decorative air-conditioner screen with ornament" }, "50% 55%", true),
+      ru: "Декоративный экран для кондиционера с орнаментом",
+      kk: "Ою-өрнекті кондиционер экраны",
+      en: "Decorative air-conditioner screen with ornament" }, "50% 55%", true),
     pAcRoof: own("assets/images/products/ac-cover-roof.webp", {
-      ru: "Визуализация: защитный короб с крышей и ажурной резкой",
-      kk: "Визуализация: шатыры бар ажурлы қорғаныс қорабы",
-      en: "Render: protective enclosure with roof and fretwork" }, "50% 55%", true),
+      ru: "Защитный короб с крышей и ажурной резкой",
+      kk: "Шатыры бар ажурлы қорғаныс қорабы",
+      en: "Protective enclosure with roof and fretwork" }, "50% 55%", true),
     pUrban: own("assets/images/products/urban-set-ornament.webp", {
-      ru: "Визуализация: ворота, кашпо и урна с национальным орнаментом",
-      kk: "Визуализация: ұлттық өрнекті қақпа, гүлсауыт және урна",
-      en: "Render: gate, planter and bin with national ornament" }, "50% 50%", true)
+      ru: "Ворота, кашпо и урна с национальным орнаментом",
+      kk: "Ұлттық өрнекті қақпа, гүлсауыт және урна",
+      en: "Gate, planter and bin with national ornament" }, "50% 50%", true)
   };
 })();
