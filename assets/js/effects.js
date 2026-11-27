@@ -107,7 +107,7 @@
   }
 
   var pageHero = document.querySelector(".page-hero");
-  if (hero && !reduce) makeSparks(hero, 0.7);
+  if (hero) { addBolt(hero); if (!reduce) makeSparks(hero, isMobile ? 0.5 : 0.8); }
   if (pageHero) {
     // крупное контурное слово на фоне — название раздела
     var page = document.body.getAttribute("data-page");
